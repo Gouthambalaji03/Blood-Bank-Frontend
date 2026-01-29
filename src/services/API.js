@@ -1,6 +1,12 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: process.env.REACT_APP_BASEURL });
+// Ensure baseURL has https:// prefix
+let baseURL = process.env.REACT_APP_BASEURL || "http://localhost:8080/api/v1";
+if (baseURL && !baseURL.startsWith("http://") && !baseURL.startsWith("https://")) {
+  baseURL = "https://" + baseURL;
+}
+
+const API = axios.create({ baseURL });
 
 // Request interceptor - add token to headers
 API.interceptors.request.use(
