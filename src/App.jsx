@@ -12,6 +12,7 @@ import Hospital from './pages/Dashboard/Hospital';
 import OrganisationPage from './pages/Dashboard/OrganisationPage';
 import Consumer from './pages/Dashboard/Consumer';
 import Donation from './pages/Donation';
+import AddDonation from './pages/AddDonation';
 import Analytics from './pages/Dashboard/Analytics';
 import DonarList from './pages/admin/DonarList';
 import HospitalList from './pages/admin/HospitalList';
@@ -137,6 +138,15 @@ function App() {
           element={
             <ProtectedRoute>
               <Donation />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/add-donation"
+          element={
+            <ProtectedRoute>
+              <AddDonation />
             </ProtectedRoute>
           }
         />

@@ -31,7 +31,7 @@ const Donar = () => {
       <div className="main-content">
         <div className="page-header">
           <h1 className="page-title">
-            <i className="fa-solid fa-hand-holding-heart" style={{ marginRight: '12px', color: '#28a745' }}></i>
+            <i className="fa-solid fa-hand-holding-heart" style={{ marginRight: '12px', color: '#10b981' }}></i>
             Donors List
           </h1>
           <span className="badge bg-success" style={{ padding: '10px 20px', fontSize: '14px' }}>
@@ -45,7 +45,7 @@ const Donar = () => {
               visible={true}
               height="150"
               width="150"
-              color="#c41e3a"
+              color="#e63946"
               ariaLabel="progress-bar-loading"
             />
           </div>

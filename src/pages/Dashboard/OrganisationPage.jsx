@@ -61,7 +61,7 @@ const OrganisationPage = () => {
               visible={true}
               height="150"
               width="150"
-              color="#c41e3a"
+              color="#e63946"
               ariaLabel="progress-bar-loading"
             />
           </div>

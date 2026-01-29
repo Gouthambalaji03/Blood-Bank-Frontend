@@ -19,7 +19,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="sidebar-brand">
         <h3>
-          <i className="fa-solid fa-droplet" style={{ color: '#c41e3a', marginRight: '10px' }}></i>
+          <i className="fa-solid fa-droplet" style={{ color: '#e63946', marginRight: '10px' }}></i>
           Blood<span className="gold">Bank</span>
         </h3>
         <span>Management System</span>
@@ -29,10 +29,10 @@ const Sidebar = () => {
         {user?.role === "organisation" && (
           <>
             <MenuItem
-              to="/"
+              to="/home"
               icon="fa-cubes"
               label="Inventory"
-              isActive={location.pathname === "/"}
+              isActive={location.pathname === "/home"}
             />
             <MenuItem
               to="/donar"
@@ -91,12 +91,20 @@ const Sidebar = () => {
         )}
 
         {user?.role === "donar" && (
-          <MenuItem
-            to="/donation"
-            icon="fa-book-medical"
-            label="Donations Log"
-            isActive={location.pathname === "/donation"}
-          />
+          <>
+            <MenuItem
+              to="/add-donation"
+              icon="fa-plus-circle"
+              label="Add Donation"
+              isActive={location.pathname === "/add-donation"}
+            />
+            <MenuItem
+              to="/donation"
+              icon="fa-book-medical"
+              label="Donations Log"
+              isActive={location.pathname === "/donation"}
+            />
+          </>
         )}
       </div>
     </div>
